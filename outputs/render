@@ -1,0 +1,204 @@
+// Preorder Traversal
+digraph {
+	1775041671520 [label="X[1] ≤ 35%
+fitness : 0.545
+
+training samples : 335
+genetic iterations : 10
+avg fitness : 0.583
+" shape=box]
+	1775041671520 -> 1775551124464
+	1775041671520 -> 1775551124608
+	1775551124464 [label="X[1] ≤ 46%
+fitness : 0.523
+
+training samples : 224
+genetic iterations : 10
+avg fitness : 0.597
+" shape=box]
+	1775551124464 -> 1775551124320
+	1775551124464 -> 1775551125040
+	1775551124320 [label="X[1] ≥ 55%
+fitness : 0.454
+
+training samples : 181
+genetic iterations : 10
+avg fitness : 0.541
+" shape=box]
+	1775551124320 -> 1775551125088
+	1775551124320 -> 1775551124416
+	1775551125088 [label="X[0] ≥ 60%
+fitness : 0.265
+
+training samples : 34
+genetic iterations : 10
+avg fitness : 0.361
+" shape=box]
+	1775551125088 -> 1775551126240
+	1775551125088 -> 1775551126288
+	1775551126240 [label="X[0] < 31%
+fitness : 0.000
+
+training samples : 18
+genetic iterations : 8
+avg fitness : 0.447
+" color=green shape=box]
+	1775551126240 -> 1775551127296
+	1775551126240 -> 1775551127344
+	1775551127296 [label="class: 0" color=blue]
+	1775551127344 [label="class: 2" color=blue]
+	1775551126288 [label="class: 2" color=blue]
+	1775551124416 [label="X[0] > 68%
+fitness : 0.399
+
+training samples : 147
+genetic iterations : 10
+avg fitness : 0.450
+" shape=box]
+	1775551124416 -> 1775551125280
+	1775551124416 -> 1775551124848
+	1775551125280 [label="X[0] ≥ 27%
+fitness : 0.314
+
+training samples : 95
+genetic iterations : 10
+avg fitness : 0.486
+" shape=box]
+	1775551125280 -> 1775551124752
+	1775551125280 -> 1775551127536
+	1775551124752 [label="X[1] ≥ 61%
+fitness : 0.029
+
+training samples : 35
+genetic iterations : 10
+avg fitness : 0.053
+" shape=box]
+	1775551124752 -> 1775551128016
+	1775551124752 -> 1775551125376
+	1775551128016 [label="class: 0" color=blue]
+	1775551125376 [label="class: 0" color=blue]
+	1775551127536 [label="X[0] > 54%
+fitness : 0.378
+
+training samples : 60
+genetic iterations : 10
+avg fitness : 0.448
+" shape=box]
+	1775551127536 -> 1775551128160
+	1775551127536 -> 1775551124800
+	1775551128160 [label="class: 1" color=blue]
+	1775551124800 [label="class: 0" color=blue]
+	1775551124848 [label="X[1] ≤ 61%
+fitness : 0.055
+
+training samples : 52
+genetic iterations : 10
+avg fitness : 0.158
+" shape=box]
+	1775551124848 -> 1775551127152
+	1775551124848 -> 1775551126864
+	1775551127152 [label="class: 0" color=blue]
+	1775551126864 [label="X[1] ≤ 59%
+fitness : 0.000
+
+training samples : 7
+genetic iterations : 9
+avg fitness : 0.404
+" color=green shape=box]
+	1775551126864 -> 1775551128208
+	1775551126864 -> 1775551127920
+	1775551128208 [label="class: 0" color=blue]
+	1775551127920 [label="class: 2" color=blue]
+	1775551125040 [label="X[0] ≥ 68%
+fitness : 0.310
+
+training samples : 43
+genetic iterations : 10
+avg fitness : 0.341
+" shape=box]
+	1775551125040 -> 1775551125472
+	1775551125040 -> 1775551124704
+	1775551125472 [label="X[0] ≥ 62%
+fitness : 0.349
+
+training samples : 30
+genetic iterations : 10
+avg fitness : 0.414
+" shape=box]
+	1775551125472 -> 1775551126144
+	1775551125472 -> 1775551125808
+	1775551126144 [label="X[0] < 3%
+fitness : 0.451
+
+training samples : 21
+genetic iterations : 10
+avg fitness : 0.495
+" shape=box]
+	1775551126144 -> 1775551127248
+	1775551126144 -> 1775551127200
+	1775551127248 [label="X[0] ≥ 22%
+fitness : 0.243
+
+training samples : 19
+genetic iterations : 10
+avg fitness : 0.467
+" shape=box]
+	1775551127248 -> 1775551123120
+	1775551127248 -> 1775551128592
+	1775551123120 [label="class: 2" color=blue]
+	1775551128592 [label="class: 0" color=blue]
+	1775551127200 [label="class: 2" color=blue]
+	1775551125808 [label="class: 2" color=blue]
+	1775551124704 [label="class: 2" color=blue]
+	1775551124608 [label="X[0] < 60%
+fitness : 0.315
+
+training samples : 111
+genetic iterations : 10
+avg fitness : 0.403
+" shape=box]
+	1775551124608 -> 1775551124656
+	1775551124608 -> 1775551125760
+	1775551124656 [label="class: 2" color=blue]
+	1775551125760 [label="X[0] < 17%
+fitness : 0.269
+
+training samples : 70
+genetic iterations : 10
+avg fitness : 0.457
+" shape=box]
+	1775551125760 -> 1775551125952
+	1775551125760 -> 1775551126096
+	1775551125952 [label="X[0] < 30%
+fitness : 0.041
+
+training samples : 47
+genetic iterations : 10
+avg fitness : 0.347
+" shape=box]
+	1775551125952 -> 1775551124272
+	1775551125952 -> 1775551126048
+	1775551124272 [label="X[1] > 9%
+fitness : 0.050
+
+training samples : 35
+genetic iterations : 10
+avg fitness : 0.055
+" shape=box]
+	1775551124272 -> 1775551128064
+	1775551124272 -> 1775551128112
+	1775551128064 [label="X[1] ≥ 4%
+fitness : 0.188
+
+training samples : 8
+genetic iterations : 10
+avg fitness : 0.214
+" shape=box]
+	1775551128064 -> 1775551129120
+	1775551128064 -> 1775551129168
+	1775551129120 [label="class: 0" color=blue]
+	1775551129168 [label="class: 0" color=blue]
+	1775551128112 [label="class: 0" color=blue]
+	1775551126048 [label="class: 2" color=blue]
+	1775551126096 [label="class: 2" color=blue]
+}
