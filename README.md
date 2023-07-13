@@ -1,5 +1,12 @@
 # Genetic based Decision-Tree in Python
-This repository contains an implementation of **Decision Tree Classifier** which employs **Genetic Algorithm** for finding the best possible split on every node of the tree. No matter how many columns or how many classes is in your dataset, as long as it containing numerical rows, this package would classify it for you!
+This repository contains an implementation of **Decision Tree Classifier** which employs **Genetic Algorithm** for finding optimal split on every node of the tree. No matter how many columns or how many classes is in your dataset, as long as it contains numerical rows, this package would classify it for you!
+
+### Requirements
+1. `numpy`
+2. `sklearn`
+  <br> But wait 😅, it's not going to be a part of FROM-SCRATCH implementation, I only used it in [main.ipynb](https://github.com/mohammadAbbasniya/Genetic_DecisionTree_python/blob/main/main.ipynb) and [main.py](https://github.com/mohammadAbbasniya/Genetic_DecisionTree_python/blob/main/main.py) for the use of **train_test_split**, **confusion_matrix** and **accuracy_score** functions, not more, I promise.
+3. `graphviz` 
+  <br> This is a relatively large package, it is only used in [main.ipynb](https://github.com/mohammadAbbasniya/Genetic_DecisionTree_python/blob/main/main.ipynb) for the visualisation of decision tree expansion. You don't have to install it if you are **Not** going to export the decision tree as an image.
 
 ## About Decision-tree
 A decision tree is a decision support hierarchical model that uses a tree-like model of decisions and their possible consequences. Decision trees are commonly used in operations research, specifically in decision analysis, to help identify a strategy most likely to reach a goal, but are also a popular tool in machine learning. A decision tree is a flowchart-like structure in which each internal node represents a "test" on an attribute (e.g. whether a coin flip comes up heads or tails), each branch represents the outcome of the test, and each leaf node represents a class label (decision taken after computing all attributes). The paths from root to leaf represent classification rules [[Wiki](https://en.wikipedia.org/wiki/Decision_tree)]. An example of decision tree:
@@ -10,7 +17,7 @@ A decision tree is a decision support hierarchical model that uses a tree-like m
 ## About Genetic-algorithm
 In computer science and operations research, a genetic algorithm (GA) is a metaheuristic inspired by the process of natural selection that belongs to the larger class of evolutionary algorithms (EA). Genetic algorithms are commonly used to generate high-quality solutions to optimization and search problems by relying on biologically inspired operators such as mutation, crossover and selection. Some examples of GA applications include optimizing decision trees for better performance, solving sudoku puzzles, hyperparameter optimization, causal inference, etc. [[Wiki](https://en.wikipedia.org/wiki/Genetic_algorithm)].
 <p align='center'>
-  <img height="400" alt="genetic-example" src="https://github.com/mohammadAbbasniya/Genetic_DecisionTree_python/blob/main/README.imgs/genetic-example.jpg">
+  <img height="300" alt="genetic-example" src="https://github.com/mohammadAbbasniya/Genetic_DecisionTree_python/blob/main/README.imgs/genetic-example.jpg">
 </p>
 
 ## Project structure
@@ -28,19 +35,30 @@ In computer science and operations research, a genetic algorithm (GA) is a metah
       This file contains `Node` class. This is a node in our decision-tree; each node can perform `classify` on a sample; if the node is  terminal so it knows the class, but if it's a middle node, it decides left or right child should classify that sample.
 
   - #### 📄 [decision_tree_criteria.py]
-      This file contains `Criterion` and `Gini` classes. The `Criterion` class holds internal X and y; it can apply any chromosome on any part of dataset mentioned by indices of rows, but it's an abstract class with two umimplemneted methods `gain` and `impurity`. These methods should be implemented in subclasses which are going to be a criterion of splitting data. The `Gini` class is a subclass for `Criterion` and implemented its abstract methods based on gini index formula: <br>
-$$impurity\left(t\right)=1-\sum_{j}\left[p\left(j\middle| t\right)\right]^2          $$
-$${gain\ }_{split}=\sum_{i=1}^{k}\frac{n_i}{n}impurity\left(i\right)$$
+      This file contains `Criterion` and `Gini` classes. The `Criterion` class holds internal X and y; it can apply any chromosome on any part of dataset mentioned by indices of rows, but it's an abstract class with two unimplemented methods `gain` and `impurity`. These methods should be implemented in subclasses which are going to be a criterion for splitting data. The `Gini` class is a subclass for `Criterion` and implemented its abstract methods based on gini index formula: <br>
+```math
+impurity\left(t\right)=1-\sum_{j}\left[p\left(j\middle| t\right)\right]^2
+~~~~~~~~~~~
+{gain}_{split} = \sum_{i=1}^{k} \frac{n_i}{n} impurity \left( i \right)
+```
 
 - ### 📄 file [main.ipynb] and [main.py]
-    1
+    These files are my Demo files that show how to make in-use this classifier on a dataset, although it's very simple. At the end of `main.ipynb` there is a cell that uses `graphviz` library and exports the whole decision tree as an image like this:
+<p align='center'>
+  <img height="400" alt="genetic-example" src="https://github.com/mohammadAbbasniya/Genetic_DecisionTree_python/blob/main/outputs/render.png">
+</p>
 
 - ### 📂 directory [inputs]
-    1
+    This directory constains some input data for classification test.
 
 - ### 📂 directory [outputs]
-    1
+    This directory contains output files of project (exports of `graphviz`).
 
+
+## TODO list
+1. Implement other criteria like `entropy` and `Error`
+2. Apply the model on well-knowns datasets
+3. Create `Pypi` package
 
 
 
