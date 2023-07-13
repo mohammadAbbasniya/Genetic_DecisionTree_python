@@ -16,18 +16,16 @@ In computer science and operations research, a genetic algorithm (GA) is a metah
 ## Project structure
 - ### 📂 directory [genetic_decision_tree]
   - #### 📄 [genetic_chromo.py]
-      This file contains class Chromo, it's the representation of problem in genetic. Each chromosome should represent a vlid 'Split' on dataset which is 
+      This file contains `Chromo` class. It's the representation of problem in genetic. Each chromosome should represent a valid 'Split' on dataset. Chromosomes consist of three Genes: <br> 1) feature (column) to be used for splitting data <br> 2) operator for comparing each sample (can be >, <, >= or <=) <br> 3) A percentage by which we decide each sample should go to right-set or left-set <br><br> *For example*, chromosome [X1, >, 20] will split data in this way: for each sample, if the value of X1 is greater than 20% it will be in righ-set, otherwise left-set. For more explaintion, consider these values to be in column X1 of dataset: {4, 1, 8, 3, 6, 25}, applying that chromosome on these values will split them into right:{8, 6, 25} and left:{4, 1, 3}.
 
   - #### 📄 [genetic_split_founder.py]
-      This file contains class GeneticSplitFinder
+      This file contains `GeneticSplitFinder` class. It's where the genetic algorithm of project is implemented. This class takes indices of rows in dataset (instead of rows themself, to decrease memory usage) and finds a good chromosome that can perform optimal split on these rows. Note that parameters of genetic algorithm like population size (K), number of iterations, criteria etc., are taken through the `constructor (__init__)` of this class, but indices of intended rows to be split are taken by `run` method.
 
   - #### 📄 [genetic_decision_tree_classifier.py]
-      1
-
-
+      This file contains `GeneticDecisionTreeClassifier` class. This is the class in which the decision-tree is implemented. When `fit(X, y)` is called, it takes a copy of X and y as internal values and the scales each column of X to [0-100]. Then, expands the tree level-order by constantly asking `GeneticSplitFinder.run` for an optimal split.
 
   - #### 📄 [decision_tree_node.py]
-      1
+      This file contains `Node` class. This is a node in our decision-tree; each node can perform `classify` on a sample; if the node is  terminal so it knows the class, but if it's a middle node, it decides left or right child should classify that sample.
 
   - #### 📄 [decision_tree_criteria.py]
       1
