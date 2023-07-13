@@ -1,5 +1,5 @@
 # Genetic based Decision-Tree in Python
-This repository contains an implementation of **Decision Tree Classifier** which employs **Genetic Algorithm** for finding the best possible split on every node of the tree. 
+This repository contains an implementation of **Decision Tree Classifier** which employs **Genetic Algorithm** for finding the best possible split on every node of the tree. No matter how many columns or how many classes is in your dataset, as long as it containing numerical rows, this package would classify it for you!
 
 ## About Decision-tree
 A decision tree is a decision support hierarchical model that uses a tree-like model of decisions and their possible consequences. Decision trees are commonly used in operations research, specifically in decision analysis, to help identify a strategy most likely to reach a goal, but are also a popular tool in machine learning. A decision tree is a flowchart-like structure in which each internal node represents a "test" on an attribute (e.g. whether a coin flip comes up heads or tails), each branch represents the outcome of the test, and each leaf node represents a class label (decision taken after computing all attributes). The paths from root to leaf represent classification rules [[Wiki](https://en.wikipedia.org/wiki/Decision_tree)]. An example of decision tree:
@@ -28,7 +28,9 @@ In computer science and operations research, a genetic algorithm (GA) is a metah
       This file contains `Node` class. This is a node in our decision-tree; each node can perform `classify` on a sample; if the node is  terminal so it knows the class, but if it's a middle node, it decides left or right child should classify that sample.
 
   - #### 📄 [decision_tree_criteria.py]
-      1
+      This file contains `Criterion` and `Gini` classes. The `Criterion` class holds internal X and y; it can apply any chromosome on any part of dataset mentioned by indices of rows, but it's an abstract class with two umimplemneted methods `gain` and `impurity`. These methods should be implemented in subclasses which are going to be a criterion of splitting data. The `Gini` class is a subclass for `Criterion` and implemented its abstract methods based on gini index formula: <br>
+$$impurity\left(t\right)=1-\sum_{j}\left[p\left(j\middle| t\right)\right]^2          $$
+$${gain\ }_{split}=\sum_{i=1}^{k}\frac{n_i}{n}impurity\left(i\right)$$
 
 - ### 📄 file [main.ipynb] and [main.py]
     1
